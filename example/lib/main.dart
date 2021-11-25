@@ -66,48 +66,48 @@ class _MyAppState extends State<MyApp> {
                     endIcon: Icons.add_circle_outline,
                     controller: c1,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                   AnimateIcons(
                     startIcon: Icons.star,
                     endIcon: Icons.star_border,
                     controller: c2,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                   AnimateIcons(
                     startIcon: Icons.calculate,
                     endIcon: Icons.calculate_outlined,
                     controller: c3,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                   AnimateIcons(
                     startIcon: Icons.dashboard,
                     endIcon: Icons.dashboard_outlined,
                     controller: c4,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                   AnimateIcons(
                     startIcon: Icons.handyman,
                     endIcon: Icons.handyman_outlined,
                     controller: c5,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                   AnimateIcons(
                     startIcon: Icons.terrain_rounded,
                     endIcon: Icons.terrain_outlined,
                     controller: c6,
                     size: 45.0,
-                    onEndIconPress: () => onEndIconPress(context),
-                    onStartIconPress: () => onStartIconPress(context),
+                    // onEndIconPress: () => onEndIconPress(context),
+                    // onStartIconPress: () => onStartIconPress(context),
                   ),
                 ],
               ),
@@ -117,72 +117,72 @@ class _MyAppState extends State<MyApp> {
                 endIcon: Icons.play_arrow_outlined,
                 size: 45.0,
                 controller: AnimateIconController(),
-                onEndIconPress: () {
-                  if (c1.isStart()) {
-                    c1.animateToEnd();
-                  } else if (c1.isEnd()) {
-                    c1.animateToStart();
-                  }
-                  if (c2.isStart()) {
-                    c2.animateToEnd();
-                  } else if (c2.isEnd()) {
-                    c2.animateToStart();
-                  }
-                  if (c3.isStart()) {
-                    c3.animateToEnd();
-                  } else if (c3.isEnd()) {
-                    c3.animateToStart();
-                  }
-                  if (c4.isStart()) {
-                    c4.animateToEnd();
-                  } else if (c4.isEnd()) {
-                    c4.animateToStart();
-                  }
-                  if (c5.isStart()) {
-                    c5.animateToEnd();
-                  } else if (c5.isEnd()) {
-                    c5.animateToStart();
-                  }
-                  if (c6.isStart()) {
-                    c6.animateToEnd();
-                  } else if (c6.isEnd()) {
-                    c6.animateToStart();
-                  }
-                  return true;
-                },
-                onStartIconPress: () {
-                  if (c1.isStart()) {
-                    c1.animateToEnd();
-                  } else if (c1.isEnd()) {
-                    c1.animateToStart();
-                  }
-                  if (c2.isStart()) {
-                    c2.animateToEnd();
-                  } else if (c2.isEnd()) {
-                    c2.animateToStart();
-                  }
-                  if (c3.isStart()) {
-                    c3.animateToEnd();
-                  } else if (c3.isEnd()) {
-                    c3.animateToStart();
-                  }
-                  if (c4.isStart()) {
-                    c4.animateToEnd();
-                  } else if (c4.isEnd()) {
-                    c4.animateToStart();
-                  }
-                  if (c5.isStart()) {
-                    c5.animateToEnd();
-                  } else if (c5.isEnd()) {
-                    c5.animateToStart();
-                  }
-                  if (c6.isStart()) {
-                    c6.animateToEnd();
-                  } else if (c6.isEnd()) {
-                    c6.animateToStart();
-                  }
-                  return true;
-                },
+                // onEndIconPress: () {
+                //   if (c1.isStart()) {
+                //     c1.animateToEnd();
+                //   } else if (c1.isEnd()) {
+                //     c1.animateToStart();
+                //   }
+                //   if (c2.isStart()) {
+                //     c2.animateToEnd();
+                //   } else if (c2.isEnd()) {
+                //     c2.animateToStart();
+                //   }
+                //   if (c3.isStart()) {
+                //     c3.animateToEnd();
+                //   } else if (c3.isEnd()) {
+                //     c3.animateToStart();
+                //   }
+                //   if (c4.isStart()) {
+                //     c4.animateToEnd();
+                //   } else if (c4.isEnd()) {
+                //     c4.animateToStart();
+                //   }
+                //   if (c5.isStart()) {
+                //     c5.animateToEnd();
+                //   } else if (c5.isEnd()) {
+                //     c5.animateToStart();
+                //   }
+                //   if (c6.isStart()) {
+                //     c6.animateToEnd();
+                //   } else if (c6.isEnd()) {
+                //     c6.animateToStart();
+                //   }
+                //   return true;
+                // },
+                // onStartIconPress: () {
+                //   if (c1.isStart()) {
+                //     c1.animateToEnd();
+                //   } else if (c1.isEnd()) {
+                //     c1.animateToStart();
+                //   }
+                //   if (c2.isStart()) {
+                //     c2.animateToEnd();
+                //   } else if (c2.isEnd()) {
+                //     c2.animateToStart();
+                //   }
+                //   if (c3.isStart()) {
+                //     c3.animateToEnd();
+                //   } else if (c3.isEnd()) {
+                //     c3.animateToStart();
+                //   }
+                //   if (c4.isStart()) {
+                //     c4.animateToEnd();
+                //   } else if (c4.isEnd()) {
+                //     c4.animateToStart();
+                //   }
+                //   if (c5.isStart()) {
+                //     c5.animateToEnd();
+                //   } else if (c5.isEnd()) {
+                //     c5.animateToStart();
+                //   }
+                //   if (c6.isStart()) {
+                //     c6.animateToEnd();
+                //   } else if (c6.isEnd()) {
+                //     c6.animateToStart();
+                //   }
+                //   return true;
+                // },
               ),
             ],
           ),

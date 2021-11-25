@@ -13,13 +13,13 @@ class AnimateIcons extends StatefulWidget {
     /// It should return a bool
     /// If true is returned it'll animate to the end icon
     /// if false is returned it'll not animate to the end icons
-    required this.onStartIconPress,
+    //  this.onStartIconPress,
 
     /// The callback on endIcon Press
     /// /// It should return a bool
     /// If true is returned it'll animate to the end icon
     /// if false is returned it'll not animate to the end icons
-    required this.onEndIconPress,
+    //  this.onEndIconPress,
 
     /// The size of the icon that are to be shown.
     this.size,
@@ -40,19 +40,19 @@ class AnimateIcons extends StatefulWidget {
     this.clockwise,
 
     /// This is the tooltip that will be used for the [startIcon]
-    this.startTooltip,
+    // this.startTooltip,
 
     /// This is the tooltip that will be used for the [endIcon]
-    this.endTooltip,
+    // this.endTooltip,
   });
   final IconData startIcon, endIcon;
-  final bool Function() onStartIconPress, onEndIconPress;
+  // final bool? Function() onStartIconPress, onEndIconPress;
   final Duration? duration;
   final bool? clockwise;
   final double? size;
   final Color? startIconColor, endIconColor;
   final AnimateIconController controller;
-  final String? startTooltip, endTooltip;
+  // final String? startTooltip, endTooltip;
 
   @override
   _AnimateIconsState createState() => _AnimateIconsState();
@@ -106,13 +106,13 @@ class _AnimateIconsState extends State<AnimateIcons>
     widget.controller.isEnd = () => _controller.value == 1.0;
   }
 
-  _onStartIconPress() {
-    if (widget.onStartIconPress() && mounted) _controller.forward();
-  }
+  // _onStartIconPress() {
+  //   if (widget.onStartIconPress() && mounted) _controller.forward();
+  // }
 
-  _onEndIconPress() {
-    if (widget.onEndIconPress() && mounted) _controller.reverse();
-  }
+  // _onEndIconPress() {
+  //   if (widget.onEndIconPress() && mounted) _controller.reverse();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -122,44 +122,45 @@ class _AnimateIconsState extends State<AnimateIcons>
     double angleY = math.pi / 180 * (180 * y);
 
     Widget first() {
-      final icon = Icon(widget.startIcon, size: widget.size);
+      // final icon = Icon(widget.startIcon, size: widget.size);
       return Transform.rotate(
         angle: widget.clockwise ?? false ? angleX : -angleX,
         child: Opacity(
           opacity: y,
-          child: IconButton(
-            iconSize: widget.size ?? 24.0,
+          child: 
+          Icon(widget.startIcon,
+            size: widget.size ?? 24.0,
             color: widget.startIconColor ?? Theme.of(context).primaryColor,
-            disabledColor: Colors.grey.shade500,
-            icon: widget.startTooltip == null
-                ? icon
-                : Tooltip(
-                    message: widget.startTooltip!,
-                    child: icon,
-                  ),
-            onPressed: _onStartIconPress,
+            // disabledColor: Colors.grey.shade500,
+            // icon: widget.startTooltip == null
+            //     ? icon
+            //     : Tooltip(
+            //         message: widget.startTooltip!,
+            //         child: icon,
+            //       ),
+            // onPressed: _onStartIconPress,
           ),
         ),
       );
     }
 
     Widget second() {
-      final icon = Icon(widget.endIcon);
+      // final icon = Icon(widget.endIcon);
       return Transform.rotate(
         angle: widget.clockwise ?? false ? -angleY : angleY,
         child: Opacity(
           opacity: x,
-          child: IconButton(
-            iconSize: widget.size ?? 24.0,
+          child: Icon(widget.endIcon,
+            size: widget.size ?? 24.0,
             color: widget.endIconColor ?? Theme.of(context).primaryColor,
-            disabledColor: Colors.grey.shade500,
-            icon: widget.endTooltip == null
-                ? icon
-                : Tooltip(
-                    message: widget.endTooltip!,
-                    child: icon,
-                  ),
-            onPressed: _onEndIconPress,
+            // disabledColor: Colors.grey.shade500,
+            // icon: widget.endTooltip == null
+            //     ? icon
+            //     : Tooltip(
+            //         message: widget.endTooltip!,
+            //         child: icon,
+            //       ),
+            // onPressed: _onEndIconPress,
           ),
         ),
       );
